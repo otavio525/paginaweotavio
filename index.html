@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE LIGA - HTML e CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-lightbulb logo-icon"></i>
+            <span>SE LIGA</span>
+        </div>
+        <h1>Conceitos de HTML e CSS</h1>
+        <p>Aprenda os fundamentos do desenvolvimento web de forma simples e prática</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#html"><i class="fas fa-code"></i> HTML</a></li>
+            <li><a href="#css"><i class="fab fa-css3-alt"></i> CSS</a></li>
+            <li><a href="#mobile"><i class="fas fa-mobile-alt"></i> Celulares</a></li>
+            <li><a href="#exemplos"><i class="fas fa-laptop-code"></i> Exemplos</a></li>
+            <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="html">
+            <h2><i class="fas fa-code"></i> O que é HTML?</h2>
+            <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Ele descreve a estrutura de uma página web usando elementos, que são representados por tags.</p>
+            
+            <h3>Estrutura Básica do HTML</h3>
+            <div class="code-example">
+                <span class="code-comment">&lt;!-- Estrutura básica de um documento HTML --&gt;</span><br>
+                <span class="code-tag">&lt;!DOCTYPE html&gt;</span><br>
+                <span class="code-tag">&lt;html</span> <span class="code-attribute">lang</span>=<span class="code-value">"pt-BR"</span><span class="code-tag">&gt;</span><br>
+                &nbsp;&nbsp;<span class="code-tag">&lt;head&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;meta</span> <span class="code-attribute">charset</span>=<span class="code-value">"UTF-8"</span><span class="code-tag">&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;meta</span> <span class="code-attribute">name</span>=<span class="code-value">"viewport"</span> <span class="code-attribute">content</span>=<span class="code-value">"width=device-width, initial-scale=1.0"</span><span class="code-tag">&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;title&gt;</span>Título da Página<span class="code-tag">&lt;/title&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;link</span> <span class="code-attribute">rel</span>=<span class="code-value">"stylesheet"</span> <span class="code-attribute">href</span>=<span class="code-value">"style.css"</span><span class="code-tag">&gt;</span><br>
+                &nbsp;&nbsp;<span class="code-tag">&lt;/head&gt;</span><br>
+                &nbsp;&nbsp;<span class="code-tag">&lt;body&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;!-- Conteúdo da página --&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;h1&gt;</span>Minha Página Web<span class="code-tag">&lt;/h1&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;p&gt;</span>Este é um parágrafo.<span class="code-tag">&lt;/p&gt;</span><br>
+                &nbsp;&nbsp;<span class="code-tag">&lt;/body&gt;</span><br>
+                <span class="code-tag">&lt;/html&gt;</span>
+            </div>
+            
+            <h3>Elementos HTML Comuns</h3>
+            <div class="elements-grid">
+                <div class="element-card">
+                    <h4><code>&lt;h1&gt; a &lt;h6&gt;</code></h4>
+                    <p>Títulos e subtítulos</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;p&gt;</code></h4>
+                    <p>Parágrafos de texto</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;a&gt;</code></h4>
+                    <p>Links para outras páginas</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;img&gt;</code></h4>
+                    <p>Imagens</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;div&gt;</code></h4>
+                    <p>Divisões/containers</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;span&gt;</code></h4>
+                    <p>Elemento inline</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></h4>
+                    <p>Listas não ordenadas e ordenadas</p>
+                </div>
+                <div class="element-card">
+                    <h4><code>&lt;form&gt;, &lt;input&gt;</code></h4>
+                    <p>Formulários e campos de entrada</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="css">
+            <h2><i class="fab fa-css3-alt"></i> O que é CSS?</h2>
+            <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de um documento HTML. Ele controla o layout, cores, fontes e outros aspectos visuais de uma página web.</p>
+            
+            <h3>Sintaxe Básica do CSS</h3>
+            <div class="code-example">
+                <span class="code-comment">/* Seletor { propriedade: valor; } */</span><br>
+                <span class="code-tag">body</span> {<br>
+                &nbsp;&nbsp;<span class="code-attribute">background-color</span>: <span class="code-value">#f0f0f0</span>;<br>
+                &nbsp;&nbsp;<span class="code-attribute">font-family</span>: <span class="code-value">Arial, sans-serif</span>;<br>
+                &nbsp;&nbsp;<span class="code-attribute">margin</span>: <span class="code-value">0</span>;<br>
+                &nbsp;&nbsp;<span class="code-attribute">padding</span>: <span class="code-value">0</span>;<br>
+                }<br><br>
+                
+                <span class="code-tag">h1</span> {<br>
+                &nbsp;&nbsp;<span class="code-attribute">color</span>: <span class="code-value">blue</span>;<br>
+                &nbsp;&nbsp;<span class="code-attribute">text-align</span>: <span class="code-value">center</span>;<br>
+                &nbsp;&nbsp;<span class="code-attribute">font-size</span>: <span class="code-value">2.5rem</span>;<br>
+                }
+            </div>
+            
+            <h3>Formas de Aplicar CSS</h3>
+            <div class="css-methods">
+                <div class="method-card">
+                    <h4>CSS Inline</h4>
+                    <p>Estilo aplicado diretamente em um elemento HTML usando o atributo <code>style</code></p>
+                    <div class="code-example small">
+                        <span class="code-tag">&lt;h1</span> <span class="code-attribute">style</span>=<span class="code-value">"color: blue; text-align: center;"</span><span class="code-tag">&gt;</span>Título<span class="code-tag">&lt;/h1&gt;</span>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>CSS Interno</h4>
+                    <p>Estilo definido na seção <code>&lt;head&gt;</code> do documento usando a tag <code>&lt;style&gt;</code></p>
+                    <div class="code-example small">
+                        <span class="code-tag">&lt;style&gt;</span><br>
+                        &nbsp;&nbsp;<span class="code-tag">h1</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attribute">color</span>: <span class="code-value">blue</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attribute">text-align</span>: <span class="code-value">center</span>;<br>
+                        &nbsp;&nbsp;}<br>
+                        <span class="code-tag">&lt;/style&gt;</span>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>CSS Externo</h4>
+                    <p>Estilo em um arquivo separado vinculado ao HTML usando a tag <code>&lt;link&gt;</code></p>
+                    <div class="code-example small">
+                        <span class="code-tag">&lt;link</span> <span class="code-attribute">rel</span>=<span class="code-value">"stylesheet"</span> <span class="code-attribute">href</span>=<span class="code-value">"style.css"</span><span class="code-tag">&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="mobile">
+            <h2><i class="fas fa-mobile-alt"></i> Design para Celulares</h2>
+            <p>Com o aumento do uso de dispositivos móveis, é essencial criar sites que funcionem bem em smartphones e tablets. Isso é chamado de <strong>design responsivo</strong>.</p>
+            
+            <div class="mobile-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <h3>Viewport</h3>
+                    <p>A tag viewport no HTML ajuda o navegador a dimensionar a página corretamente para dispositivos móveis.</p>
+                    <div class="code-example small">
+                        <span class="code-tag">&lt;meta</span> <span class="code-attribute">name</span>=<span class="code-value">"viewport"</span> <span class="code-attribute">content</span>=<span class="code-value">"width=device-width, initial-scale=1.0"</span><span class="code-tag">&gt;</span>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h3>Media Queries</h3>
+                    <p>Permitem aplicar estilos CSS específicos para diferentes tamanhos de tela.</p>
+                    <div class="code-example small">
+                        <span class="code-tag">@media</span> (<span class="code-attribute">max-width</span>: <span class="code-value">768px</span>) {<br>
+                        &nbsp;&nbsp;<span class="code-tag">body</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-attribute">font-size</span>: <span class="code-value">14px</span>;<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-touch-pointer"></i>
+                    </div>
+                    <h3>Toque Amigável</h3>
+                    <p>Botões e links devem ser grandes o suficiente para serem tocados com o dedo.</p>
+                    <div class="code-example small">
+                        <span class="code-tag">.btn</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attribute">min-width</span>: <span class="code-value">44px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">min-height</span>: <span class="code-value">44px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">padding</span>: <span class="code-value">12px 24px</span>;<br>
+                        }
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Otimize imagens e código para carregamento rápido em conexões móveis.</p>
+                    <div class="code-example small">
+                        <span class="code-tag">.image</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attribute">max-width</span>: <span class="code-value">100%</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">height</span>: <span class="code-value">auto</span>;<br>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tips">
+                <h3>Dicas para Design Mobile</h3>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle tip-icon"></i>
+                    <div>
+                        <strong>Conteúdo Prioritário:</strong> Mostre o conteúdo mais importante primeiro em dispositivos móveis.
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle tip-icon"></i>
+                    <div>
+                        <strong>Toque Amigável:</strong> Use botões com pelo menos 44x44 pixels para facilitar o toque.
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle tip-icon"></i>
+                    <div>
+                        <strong>Fontes Legíveis:</strong> Use tamanhos de fonte adequados (pelo menos 16px para texto normal).
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle tip-icon"></i>
+                    <div>
+                        <strong>Navegação Simples:</strong> Simplifique menus para dispositivos móveis.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="exemplos">
+            <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+            <p>Abaixo estão alguns exemplos práticos de como HTML e CSS trabalham juntos:</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>Botão Estilizado</h3>
+                    <div class="code-example">
+                        <span class="code-comment">&lt;!-- HTML --&gt;</span><br>
+                        <span class="code-tag">&lt;button</span> <span class="code-attribute">class</span>=<span class="code-value">"btn"</span><span class="code-tag">&gt;</span>Clique Aqui<span class="code-tag">&lt;/button&gt;</span>
+                    </div>
+                    <div class="code-example">
+                        <span class="code-comment">/* CSS */</span><br>
+                        <span class="code-tag">.btn</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attribute">background-color</span>: <span class="code-value">#3498db</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">color</span>: <span class="code-value">white</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">padding</span>: <span class="code-value">12px 24px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">border</span>: <span class="code-value">none</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">border-radius</span>: <span class="code-value">5px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">cursor</span>: <span class="code-value">pointer</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">font-size</span>: <span class="code-value">16px</span>;<br>
+                        }
+                    </div>
+                    <button class="btn-demo">Clique Aqui</button>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Cartão de Informação</h3>
+                    <div class="code-example">
+                        <span class="code-comment">&lt;!-- HTML --&gt;</span><br>
+                        <span class="code-tag">&lt;div</span> <span class="code-attribute">class</span>=<span class="code-value">"card"</span><span class="code-tag">&gt;</span><br>
+                        &nbsp;&nbsp;<span class="code-tag">&lt;h3&gt;</span>Título do Cartão<span class="code-tag">&lt;/h3&gt;</span><br>
+                        &nbsp;&nbsp;<span class="code-tag">&lt;p&gt;</span>Conteúdo do cartão...<span class="code-tag">&lt;/p&gt;</span><br>
+                        <span class="code-tag">&lt;/div&gt;</span>
+                    </div>
+                    <div class="code-example">
+                        <span class="code-comment">/* CSS */</span><br>
+                        <span class="code-tag">.card</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attribute">background</span>: <span class="code-value">white</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">border-radius</span>: <span class="code-value">8px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">box-shadow</span>: <span class="code-value">0 2px 10px rgba(0,0,0,0.1)</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">padding</span>: <span class="code-value">20px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">margin</span>: <span class="code-value">15px 0</span>;<br>
+                        }
+                    </div>
+                    <div class="card-demo">
+                        <h3>Título do Cartão</h3>
+                        <p>Conteúdo do cartão...</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Layout com Flexbox</h3>
+                    <div class="code-example">
+                        <span class="code-comment">&lt;!-- HTML --&gt;</span><br>
+                        <span class="code-tag">&lt;div</span> <span class="code-attribute">class</span>=<span class="code-value">"container"</span><span class="code-tag">&gt;</span><br>
+                        &nbsp;&nbsp;<span class="code-tag">&lt;div</span> <span class="code-attribute">class</span>=<span class="code-value">"item"</span><span class="code-tag">&gt;</span>Item 1<span class="code-tag">&lt;/div&gt;</span><br>
+                        &nbsp;&nbsp;<span class="code-tag">&lt;div</span> <span class="code-attribute">class</span>=<span class="code-value">"item"</span><span class="code-tag">&gt;</span>Item 2<span class="code-tag">&lt;/div&gt;</span><br>
+                        &nbsp;&nbsp;<span class="code-tag">&lt;div</span> <span class="code-attribute">class</span>=<span class="code-value">"item"</span><span class="code-tag">&gt;</span>Item 3<span class="code-tag">&lt;/div&gt;</span><br>
+                        <span class="code-tag">&lt;/div&gt;</span>
+                    </div>
+                    <div class="code-example">
+                        <span class="code-comment">/* CSS */</span><br>
+                        <span class="code-tag">.container</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attribute">display</span>: <span class="code-value">flex</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">justify-content</span>: <span class="code-value">space-between</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">gap</span>: <span class="code-value">10px</span>;<br>
+                        }<br><br>
+                        
+                        <span class="code-tag">.item</span> {<br>
+                        &nbsp;&nbsp;<span class="code-attribute">padding</span>: <span class="code-value">15px</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">background</span>: <span class="code-value">#eee</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">flex</span>: <span class="code-value">1</span>;<br>
+                        &nbsp;&nbsp;<span class="code-attribute">text-align</span>: <span class="code-value">center</span>;<br>
+                        }
+                    </div>
+                    <div class="container-demo">
+                        <div class="item-demo">Item 1</div>
+                        <div class="item-demo">Item 2</div>
+                        <div class="item-demo">Item 3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="recursos">
+            <h2><i class="fas fa-book"></i> Recursos para Aprender Mais</h2>
+            <p>Para aprofundar seus conhecimentos em HTML e CSS, explore estes recursos:</p>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4><i class="fas fa-graduation-cap"></i> Tutoriais Online</h4>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
+                        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
+                        <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools - CSS Tutorial</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h4><i class="fas fa-tools"></i> Ferramentas</h4>
+                    <ul>
+                        <li><a href="https://codepen.io/" target="_blank">CodePen - Editor Online</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                        <li><a href="https://colorhunt.co/" target="_blank">Color Hunt - Paletas de Cores</a></li>
+                        <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h4><i class="fas fa-rocket"></i> Prática</h4>
+                    <ul>
+                        <li><a href="https://www.freecodecamp.org/learn/" target="_blank">freeCodeCamp</a></li>
+                        <li><a href="https://cssbattle.dev/" target="_blank">CSS Battle</a></li>
+                        <li><a href="https://frontendmentor.io/" target="_blank">Frontend Mentor</a></li>
+                        <li><a href="https://codier.io/" target="_blank">Codier - Desafios CSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tips">
+                <h3>Próximos Passos</h3>
+                <p>Depois de dominar HTML e CSS, você pode aprender:</p>
+                <div class="next-steps">
+                    <div class="step">
+                        <h4>JavaScript</h4>
+                        <p>Para adicionar interatividade às páginas</p>
+                    </div>
+                    <div class="step">
+                        <h4>Frameworks CSS</h4>
+                        <p>Como Bootstrap ou Tailwind CSS</p>
+                    </div>
+                    <div class="step">
+                        <h4>Pré-processadores</h4>
+                        <p>Como SASS ou LESS</p>
+                    </div>
+                    <div class="step">
+                        <h4>Design Responsivo</h4>
+                        <p>Técnicas avançadas para diferentes dispositivos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p><strong>SE LIGA - AINDA É TEMPO DE APRENDER</strong></p>
+            <p>Página educativa sobre HTML e CSS - Desenvolvido para fins educacionais</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2023 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
